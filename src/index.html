@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="script-src 'self';" /> -->
+    <title>Practice</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/js/all.min.js"
+      integrity="sha512-8pHNiqTlsrRjVD4A/3va++W1sMbUHwWxxRPWNyVlql3T+Hgfd81Qc6FC5WMXDC+tSauxxzp1tgiAvSKFu1qIlA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.1/css/bootstrap.min.css"
+      integrity="sha512-siwe/oXMhSjGCwLn+scraPOWrJxHlUgMBMZXdPe2Tnk3I0x3ESCoLz7WZ5NTH6SZrywMY+PB1cjyqJ5jAluCOg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1 style="font-weight: bold">Electron App</h1>
+    <div class="form-group">
+      <label for="width">Image:</label>
+      <input class="form-control" type="file" id="img" />
+    </div>
+    <form action="#">
+      <div class="form-group">
+        <label for="height">Height:</label>
+        <input
+          class="form-control"
+          type="number"
+          id="height"
+          placeholder="Height.."
+        />
+      </div>
+      <div class="form-group">
+        <label for="width">Width:</label>
+        <input
+          class="form-control"
+          type="number"
+          id="width"
+          placeholder="Width.."
+        />
+      </div>
+      <button class="btn btn-danger mt-2" type="submit">Resize</button>
+    </form>
+    <p class="mt-2"><strong>File: </strong><span id="filename"></span></p>
+    <p class="mt-2"><strong>Output: </strong><span id="output"></span></p>
+  </body>
+  <script type="module" defer src="./render.js"></script>
+</html>
